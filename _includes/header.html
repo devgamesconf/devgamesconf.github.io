@@ -3,6 +3,9 @@
   <h1><a href="{{ site.baseurl }}/index.html">{{ site.title }}</a></h1>
   <nav id="nav">
     <ul>
+      <!-- language -->
+      <li><a id="lang" href="#" class="language-toggle">NO</a></li>
+      <!-- menu -->
       <li class="special">
         <a href="#menu" class="menuToggle"><span>Menu</span></a>
         <div id="menu">
@@ -19,3 +22,25 @@
     </ul>
   </nav>
 </header>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var pathname = window.location.pathname;
+    var langToggle = document.querySelector('.language-toggle');
+  
+    if (pathname.includes('/it/')) {
+      langToggle.textContent = 'EN';
+      langToggle.href = pathname.replace('/it/', '/en/');
+    } else if (pathname.includes('/en/')) {
+      langToggle.textContent = 'IT';
+      langToggle.href = pathname.replace('/en/', '/it/');
+    }
+  
+    // Force a reload on click
+    langToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = this.href;
+    });
+  });
+  </script>
