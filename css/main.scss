@@ -593,6 +593,22 @@ $baseurl: '{{ site.baseurl }}/images';
 				display: inline-block;
 				padding: 0 1em 0 0;
 
+				a:link {
+					text-decoration: none;
+				}
+				
+				a:visited {
+						text-decoration: none;
+				}
+				
+				a:hover {
+						text-decoration: none;
+				}
+				
+				a:active {
+						text-decoration: none;
+				}
+
 				&:last-child {
 					padding-right: 0 !important;
 				}
@@ -604,6 +620,22 @@ $baseurl: '{{ site.baseurl }}/images';
 				li {
 					padding-right: 3.5em;
 
+					a:link {
+						text-decoration: none;
+					}
+					
+					a:visited {
+							text-decoration: none;
+					}
+					
+					a:hover {
+							text-decoration: none;
+					}
+					
+					a:active {
+							text-decoration: none;
+					}
+		
 					@include breakpoint(small) {
 						padding: 0 1em !important;
 					}
