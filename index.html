@@ -1,11 +1,11 @@
 ---
 layout: landing
 ---
-<script>window.location.href = '/it/index.html';</script>
-{%- include banner.html -%}
-{%- include oneicons.html -%}
-{%- include leftright.html -%}
-{%- include twoicons.html -%}
-{%- include calltoaction.html -%}
-
-
+<script type="text/javascript">
+    var userLang = navigator.language || navigator.userLanguage; 
+    if (userLang.includes('it')) {
+        window.location.href = '/it/index.html';
+    } else {
+        window.location.href = '/en/index.html';
+    }
+</script>
