@@ -2,16 +2,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <!--[if lte IE 8]><script src="{{ "/js/ie/html5shiv.js" | prepend: site.baseurl }}"></script><![endif]-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" href="{{ " /css/main.css" | prepend: site.baseurl }}" />
   <!--[if lte IE 8]><link rel="stylesheet" href="{{ "/css/ie8.css" | prepend: site.baseurl }}" /><![endif]-->
   <!--[if lte IE 9]><link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}" /><![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml" | prepend:
+    site.baseurl | prepend: site.url }}">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="/dev/games">
+  <meta property="og:description"
+    content="Italian Conference on Game Development || Conferenza Italiana sul Game Development">
+  <meta property="og:url" content="https://devgames.org">
+  <meta property="og:site_name" content="/dev/games">
+  <meta property="og:image" content="https://devgames.org/images/banner-small.jpg">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="428">
+  <meta property="og:image:type" content="image/jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Event",
+			"name": "/dev/games",
+			"startDate": "2025-06-05T10:00",
+			"endDate": "2025-06-06T13:00",
+			"eventStatus": "https://schema.org/EventScheduled",
+			"location": {
+			  "@type": "Place",
+			  "name": "Rome, Italy",
+			  "address": {
+				"@type": "PostalAddress",
+				"streetAddress": "",
+				"addressLocality": "Rome",
+				"addressRegion": "RM",
+				"postalCode": "00100",
+				"addressCountry": "IT"
+			  }
+			},
+      "thumbnailUrl": "https://devgames.org/images/banner-small.jpg",
+      "datePublished": "2024-12-20T15:37:53+00:00",
+			"image": "https://devgames.org/images/banner-small.jpg",
+			"description": "Italian Conference on Game Development || Conferenza Italiana sul Game Development",
+			"organizer": {
+			  "@type": "Organization",
+			  "name": "/dev/games",
+			  "url": "https://devgames.org"
+			},
+			"potentialAction": {
+			  "@type": "BuyAction",
+			  "target": "https://forms.gle/EXg623obsjoJfkd69",
+			  "actionAccessibilityRequirement": {
+				"@type": "ActionAccessSpecification",
+				"category": "https://schema.org/OnlineAccess",
+				"requiresSubscription": "false"
+			  }
+			}
+		  }
+	</script>
 </head>
