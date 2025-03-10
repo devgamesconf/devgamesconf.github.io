@@ -16,8 +16,9 @@
     <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
     {% if site.first_published %}
       {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
-      {% if diff contains '-' %}{{ site.first_published }},{% endif %}
+      {% if diff contains '-' %}{{ site.first_published }}{% endif %}
     {% endif %}
+    &mdash;
     {{ thisyear }}
     {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
   </ul>
